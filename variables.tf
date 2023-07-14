@@ -22,5 +22,10 @@ variable "subnet_id" {
 variable "key_name" {
   type = string
   default = "appkey"
-  
+}
+output "publicIP" {
+  value = aws_instance.jenkins.public_ip
+}
+output "privateIP" {
+  value = aws_instance.sonarqube.private_ip
 }
